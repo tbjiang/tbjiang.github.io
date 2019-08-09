@@ -28,3 +28,45 @@ $ cat ~/.ssh/id_rsa.pub
 $ git config --global user.name "Blair"
 $ git config --global user.email Blair@xxx.com
 ```
+
+#### git初始化及关联远程仓库
+初始化本地git仓库，关联远程仓库。例如远程仓库名为`git@github.com:blair/testgit.git`
+```git
+$ git int
+$ git remote add origin git@github.com:blair/testgit.git
+```
+#### 直接clone远程仓库或分支
+```git
+$ git clone git@github.com:blair/testgit.git
+$ git clone -b 分支名 git@github.com:blair/testgit.git
+#本地已有仓库，获取远程分支方式
+$ git checkout -b 分支名 origin/分支名
+```
+#### git 提交代码
+```git
+$ git add filename.text
+$ git commit -m "test git"
+$ git push
+```
+
+#### 回滚到某一版本
+```git
+$ git reset --hard HEAD^
+$ git reset --hard 83ff2785
+$ git push --force
+```
+
+#### 强制拉取
+```git
+$ git fetch --all  
+$ git reset --hard origin/master 
+$ git pull
+```
+
+#### 创建本地分支并关联远程分支
+```git
+$ git checkout -b new_branch
+$ git push origin new_branch
+$ git branch –set-upstream 本地新建分支名 origin/远程分支名
+```
+
