@@ -27,3 +27,4 @@ $ cat ~/.ssh/id_rsa.pub
 ```git
 $ git config --global user.name "Blair"
 $ git config --global user.email Blair@xxx.com
+```
