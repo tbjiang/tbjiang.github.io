@@ -36,7 +36,7 @@ $ conda remove --name tensotflow --all #删除环境
 ```
 
 #### 安装tensorflow
-初始化本地git仓库，关联远程仓库。例如远程仓库名为`git@github.com:blair/testgit.git`
+直接安装指定版本tensorflow
 ```shell
 $ conda install tensorflow-gpu==1.13.1 #下载指定gpu版本tensorflow 不加参数则下载最新版
 $ conda install tensorlfow==1.13.1 #下载指定cpu版本tensorflow
