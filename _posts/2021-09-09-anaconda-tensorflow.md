@@ -33,15 +33,19 @@ $ source activate tensotflow #激活环境
 ```shell
 $ source deactivate tensotflow #返回环境
 $ conda remove --name tensotflow --all #删除环境
+#or
+$ conda env remove -n tensorflow
 ```
 
 #### 安装tensorflow
 直接安装指定版本tensorflow
 ```shell
+$ conda install --channel https://conda.anaconda.org/anaconda tensorflow-gpu==1.0.1
+###or
 $ conda install tensorflow-gpu==1.13.1 #下载指定gpu版本tensorflow 不加参数则下载最新版
 $ conda install tensorlfow==1.13.1 #下载指定cpu版本tensorflow
 ```
-如果想查看版本再下载对应版本的tensorflow
+or 如果想查看版本再下载对应版本的tensorflow
 ```shell
 $ anaconda search -t conda tensorflow #查看版本
 $ anaconda show jjh_ppc64le/tensorflow-gpu #查看版本具体信息
