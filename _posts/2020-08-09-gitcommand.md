@@ -49,11 +49,19 @@ $ git commit -m "test git"
 $ git push
 ```
 
-#### 回滚到某一版本
+#### 回退到某一版本
 ```git
+git reset --soft|--mixed|--hard <commit_id>
+#强制回滚
 $ git reset --hard HEAD^
 $ git reset --hard 83ff2785
 $ git push --force
+
+#默认方式，回退到某个版本，只保留源码，回退commit和index信息（即不删除工作空间改动代码，撤销commit，并且撤销git add . 操作）
+$ git reset –-mixed 
+
+#回退到某个版本，只回退了commit的信息，不会恢复到index file一级（即不删除工作空间改动代码，撤销commit，不撤销git add .）
+$ git reset --soft
 ```
 
 #### 强制拉取
@@ -69,4 +77,14 @@ $ git checkout -b new_branch
 $ git push origin new_branch
 $ git branch –set-upstream 本地新建分支名 origin/远程分支名
 ```
+
+#### merge冲突处理
+```git
+#合并分支到主干
+$ git checkout master
+$ git merge 分支名
+#手动解决冲突，项目复杂时使用图形界面处理冲突，然后提交
+```
+
+
 
